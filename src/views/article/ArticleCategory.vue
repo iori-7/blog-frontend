@@ -55,7 +55,7 @@ import { ElMessage } from 'element-plus';
 const addCategory = async()=>{ 
     //调用接口
     let result = await articleCategoryAddService(categoryModel.value);
-    ElMessage.success(result.msg ? result.msg : '添加成功')
+    ElMessage.success(result.message ? result.message : '添加成功')
 
     //调用获取所有文章分类的函数
     articleCategoryList();
@@ -77,7 +77,7 @@ const showDialog = (row)=>{
 const updateCategory = async()=>{
     //调用接口 
     let result = await articleCategoryUpdateService(categoryModel.value);
-    ElMessage.success(result.msg ? result.msg : '修改成功')
+    ElMessage.success(result.message ? result.message : '修改成功')
     articleCategoryList();
     dialogVisible.value = false;
 } 

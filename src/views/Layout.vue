@@ -149,7 +149,7 @@ const handleCommand = (command)=>{
                 <router-view></router-view>
             </el-main>
             <!-- 底部区域 -->
-            <el-footer>2024 Created by deligede</el-footer>
+            <el-footer>2026 created by iori</el-footer>
         </el-container>
     </el-container>
 </template>
@@ -163,7 +163,7 @@ const handleCommand = (command)=>{
 
         &__logo {
             height: 120px;
-            background: url('@/assets/login2.jpg') no-repeat center / 220px auto;
+            background: url('@/assets/login.jpg') no-repeat center / 220px auto;
         }
 
         .el-menu {

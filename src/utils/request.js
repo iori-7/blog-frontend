@@ -30,13 +30,13 @@ instance.interceptors.response.use(
             return result.data;
         }
 
-        ElMessage.error(result.data.msg ? result.data.msg : '服务异常')
+        ElMessage.error(result.data.message ? result.data.message : '服务异常')
 
         return Promise.reject(result.data)
     },
     err=>{
         //判断响应状态码，如果为401，则证明未登录，提示登录，并跳转登陆页面
-        if(err.response.status === 401){
+        if(err.response?.status === 401){
             ElMessage.error('请先登录')
             router.push('/login')
         }else{

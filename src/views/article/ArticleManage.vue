@@ -154,7 +154,7 @@ const addArticle = async (clickState)=>{
     articleModel.value.state = clickState;
     //调用接口
     let result = await articleAddService(articleModel.value);
-    ElMessage.success(result.msg ? result.msg : '添加成功')
+    ElMessage.success(result.message ? result.message : '添加成功')
 
     articleList();
     //隐藏抽屉
@@ -179,7 +179,7 @@ const updateArticle = async(clickState)=>{
     //调用接口
     articleModel.value.state = clickState;
     let result = await articleUpdateService(articleModel.value)
-    ElMessage.success(result.msg ? result.msg : '修改成功')
+    ElMessage.success(result.message ? result.message : '修改成功')
     articleList();
     visibleDrawer.value = false;
 }

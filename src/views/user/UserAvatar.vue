@@ -22,7 +22,7 @@ const updateAvatar = async()=>{
     //调用接口
     let result = await userAvatarUpdateService(imgUrl.value);
 
-    ElMessage.success(result.msg ? result.msg : '修改成功')
+    ElMessage.success(result.message ? result.message : '修改成功')
 
     //修改pinia中的数据
     userInfoStore.info.userPic = imgUrl.value;

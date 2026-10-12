@@ -51,7 +51,7 @@ const register = async()=>{
     //     alert('注册失败')
     // }
     //alert(result.msg ? result.msg : '注册成功')
-    ElMessage.success(result.msg ? result.msg : '注册成功')
+    ElMessage.success(result.message ? result.message : '注册成功')
 }
 
 import  {useRouter} from 'vue-router'
@@ -63,7 +63,7 @@ const tokenStore = useTokenStore();
 const login = async()=>{
     //调用接口，完成登录
     let result = await userLoginService(registerData.value);
-    ElMessage.success(result.msg ? result.msg : '登录成功')
+    ElMessage.success(result.message ? result.message : '登录成功')
      
 
     //把得到的token存储到pinia中

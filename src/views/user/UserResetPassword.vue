@@ -72,11 +72,11 @@ const updatePassword = async () => {
     try {
         let result = await userPasswordUpdateService(formattedData)
         if (result.code === 0) {
-            ElMessage.success(result.msg ? result.msg : '修改成功')
+            ElMessage.success(result.message ? result.message : '修改成功')
             passwordInfo.value = { oldPwd: '', newPwd: '', rePwd: '' }
             router.push('/login')
         } else {
-            ElMessage.error(result.msg ? result.msg : '修改失败')
+            ElMessage.error(result.message ? result.message : '修改失败')
         }
     } catch (error) {
         ElMessage.error('修改失败')

@@ -26,7 +26,7 @@ const updateUserInfo = async ()=>{
   
     //调用接口
     let result = await userInfoUpdateService(userInfo.value);
-    ElMessage.success(result.msg ? result.msg : '修改成功')
+    ElMessage.success(result.message ? result.message : '修改成功')
 
     //修改pinia中的信息
     userInfoStore.setInfo(userInfo.value)
